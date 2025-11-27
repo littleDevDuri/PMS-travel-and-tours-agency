@@ -3,288 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMS Travel and Tours Agency</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-
+    <title>Travel & Tour Agency - Bookings</title>
+    <link rel="stylesheet" href="http://pms-travel-tour-agency.com/css/style.css" type="text/css"/>
 </head>
 <body>
-
-    <!-- HERO SECTION -->
-    <header class="hero" id="hero" role="banner">
-        <nav class="navbar container">
-            <div class="nav-left">
-                <!-- <h2 class="logo">PMS</h2> -->
-                <!-- <img class="logo" src="./images/favicon.png" alt="PMS"> -->
+    <header>
+    	<nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div class="nav-links" id="nav-links">
+		        <span class="close-btn" onclick="toggleMenu()">×</span>
+                <a href="#about-us">About Us</a>
+                <a href="#featured-destinations">Featured Destinations</a>
+                <a href="#packages">Tour Packages</a>
+                <a href="#contact-us">Contact Us</a>
+                <a href="#check-status">Check Booking Status</a>
             </div>
-
-            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <!-- <div class="nav-actions">
-                <a class="call-btn" href="tel:+1234567890">+123 456 7890</a>
-            </div> -->
         </nav>
-
-        <div class="hero-text container">
-            <h1 class="fade-up">Explore the World with Confidence</h1>
-            <p class="fade-up delay-1">Your trusted partner for unforgettable travel experiences, affordable tour packages, 
-                                       and stress-free adventures.</p>
-            <div class="hero-ctas fade-up delay-2">
-                <a href="#packages" class="explore-btn">Explore Now</a>
-                <a href="#book-your-trip" class="explore-btn outline">Book Now</a>
-            </div>
-        </div>
+        <h1>Explore the World with Confidence</h1>
+        <p>Your trusted partner for unforgettable travel experiences, affordable tour packages, and stress-free adventures.</p>
     </header>
-
-    <!-- MOST POPULAR DESTINATIONS -->
-    <section id="destinations" class="section">
-        <h2 class="section-title fade-up">Most Popular Destination</h2>
-
-        <div class="card-container">
-            <article class="card fade-up">
-                <img src="./images/d1.jpg" srcset="./images/d1.jpg 1x" loading="lazy" alt="Destination 1">
-                <h3>Kanji Valley, Switzerland</h3>
-                <p>Start From: $2,300</p>
-            </article>
-
-            <article class="card fade-up delay-1">
-                <img src="./images/d2.jpg" srcset="./images/d2.jpg 1x" loading="lazy" alt="Destination 2">
-                <h3>Baref National Park, Canada</h3>
-                <p>Start From: $1,900</p>
-            </article>
-
-            <article class="card fade-up delay-2">
-                <img src="./images/d3.png" srcset="./images/d3.png 1x" loading="lazy" alt="Destination 3">
-                <h3>Norway – Hills</h3>
-                <p>Start From: $2,800</p>
-            </article>
-
-            <article class="card fade-up delay-3">
-                <img src="./images/d4.jpg" srcset="./images/d4.jpg 1x" loading="lazy" alt="Destination 4">
-                <h3>Boracay, Philippines</h3>
-                <p>Start From: ₱2,500</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHO WE ARE -->
-    <section id="about" class="about section fade-up">
-        <div class="about-text">
-            <h2>Who We Are</h2>
-            <p>
-                PMS Travel and Tours Agency is an adventure travel agency for discerning clients seeking high-end, 
+    
+    <div class="container">
+        <section id="about-us" class="about-us">
+            <h2>About Us</h2>
+            <p>PMS Travel and Tours Agency is an adventure travel agency for discerning clients seeking high-end, 
                 personalized, and hassle-free vacations. We specialize in curating unique and luxury experiences, 
                 from hard-adventure sports to cultural excursions. Our expertise in adventure travel, 
                 combined with competitive rates for luxury accommodations and activities, 
-                translates into increased customer satisfaction and a premium travel experience.
-            </p>
-            <ul>
-                <li>✔ Adventure Experiences</li>
-                <li>✔ Reliable Tour Guide</li>
-                <li>✔ Hotel & Food Warranty</li>
-            </ul>
-        </div>
-        <div class="about-img">
-            <img src="./images/about.jpg" srcset="./images/about.jpg 1x" loading="lazy" alt="About">
-        </div>
-    </section>
-
-    <!-- EXCLUSIVE TOUR PACKAGES -->
-    <section id="packages" class="section">
-        <h2 class="section-title fade-up">Exclusive Tour Packages</h2>
-
-        <div class="grid-3">
-            <div class="pkg-card fade-up">
-                <img src="./images/p1.jpg" srcset="./images/p1.jpg 1x" loading="lazy" alt="Package 1">
-                <h4>Norway – Hills</h4>
-                <button class="explore-btn small" id="book-now" data-package="Norway – Hills">Book</button>
-            </div>
-            <div class="pkg-card fade-up">
-                <img src="./images/p2.jpg" srcset="./images/p2.jpg 1x" loading="lazy" alt="Package 2">
-                <h4>Goby – Valleys</h4>
-                <button class="explore-btn small" id="book-now" data-package="Goby – Valleys">Book</button>
-            </div>
-            <div class="pkg-card fade-up">
-                <img src="./images/p3.jpg" srcset="./images/p3.jpg 1x" loading="lazy" alt="Package 3">
-                <h4>Kazakh Cliffs – Russia</h4>
-                <button class="explore-btn small" id="book-now" data-package="Kazakh Cliffs – Russia">Book</button>
-            </div>
-            <div class="pkg-card fade-up">
-                <img src="images/p4.jpg" srcset="./images/p4.jpg 1x" loading="lazy" alt="Package 4">
-                <h4>Germany Highlands</h4>
-                <button class="explore-btn small" id="book-now" data-package="Germany Highlands">Book</button>
-            </div>
-            <div class="pkg-card fade-up">
-                <img src="./images/p5.jpg" srcset="./images/p5.jpg 1x" loading="lazy" alt="Package 5">
-                <h4>Baguio – Philippines</h4>
-                <button class="explore-btn small" id="book-now" data-package="Baguio – Philippines">Book</button>
-            </div>
-            <div class="pkg-card fade-up">
-                <img src="./images/p6.jpg" srcset="./images/p6.jpg 1x" loading="lazy" alt="Package 6">
-                <h4>Banaue Rice Terraces - Philippines</h4>
-                <button class="explore-btn small" id="book-now" data-package="Banaue Rice Terraces - Philippines">Book</button>
-            </div>
-        </div>
-
-        <div style="text-align:center; margin-top:24px;">
-            <a href="" class="explore-btn">See More</a>
-        </div>
-    </section>
-    
-    <!-- BOOK YOUR TRIP SECTION -->
-    <section id="book-your-trip" class="book-section section fade-up">
-        <h2 class="section-title">Book Your Trip</h2>
-    
-        <form id="bookingForm" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="booking-form" target="_blank" novalidate>
-            <input type="hidden" name="_subject" value="New Travel Booking Request">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-
-            <div class="form-grid">
-                <div>
-                    <label for="fullname">Full Name</label>
-                    <input id="fullname" name="Full Name" type="text" required>
+                translates into increased customer satisfaction and a premium travel experience.</p>
+        </section>
+        
+        <section id="featured-destinations" class="featured-destinations">
+            <h2>Featured Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Paris">
+                    <h3>Paris, France</h3>
+                    <p>Experience the romance of the Eiffel Tower, Louvre Museum, and charming cafes. Perfect for city tours and cultural explorations.</p>
                 </div>
-
-                <div>
-                    <label for="email">Email</label>
-                    <input id="email" name="Email" type="email" required>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Bali">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Relax on pristine beaches, hike volcanoes, and immerse in vibrant culture. Ideal for adventure and sea-based getaways.</p>
                 </div>
-
-                <div>
-                    <label for="phone">Phone</label>
-                    <input id="phone" name="Phone" type="tel" required>
-                </div>
-
-                <div>
-                    <label for="destination">Destination</label>
-                    <input id="destination" name="Destination" type="text" required>
-                </div>
-
-                <div>
-                    <label for="package">Select Package</label>
-                    <select id="package" name="Package" required>
-                        <option value="">Choose a package...</option>
-                        <option>Mountain Explorer</option>
-                        <option>Island Escape</option>
-                        <option>City Adventure</option>
-                        <option>Hiking Experience</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="travelers">Number of Travelers</label>
-                    <input id="travelers" name="Travelers" type="number" min="1" value="1" required>
-                </div>
-
-                <div>
-                    <label for="date">Travel Date</label>
-                    <input id="date" name="Travel Date" type="date" required>
-                </div>
-
-                <div>
-                    <label for="message">Message / Special Requests</label>
-                    <textarea id="message" name="Message" rows="5" required></textarea>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="New York">
+                    <h3>New York, USA</h3>
+                    <p>From Broadway shows to skyline views, explore the city that never sleeps. Great for air travel and urban adventures.</p>
                 </div>
             </div>
-
-            <div style="text-align: center;">
-                <button type="submit" class="explore-btn book-btn">Submit Booking</button>
+        </section>
+        
+        <section id="packages">
+            <h2>Tour Packages</h2>
+            <div class="selector">
+                <label for="package-type">Select Package Type:</label>
+                <select id="package-type">
+                    <option value="Air-Based">Air-Based</option>
+                    <option value="Land-Based">Land-Based</option>
+                    <option value="Sea-Based">Sea-Based</option>
+                </select>
             </div>
-
-        </form>
-    </section>
-
-
-    <!-- GALLERY -->
-    <!-- <section id="gallery" class="section">
-        <h2 class="section-title fade-up">Travel Gallery</h2>
-        <div class="gallery">
-            <img src="./images/g1.jpg" srcset="./images/g1.jpg 1x" loading="lazy" alt="gallery1" class="fade-up">
-            <img src="./images/g2.jpg" srcset="./images/g2.jpg 1x" loading="lazy" alt="gallery2" class="fade-up delay-1">
-            <img src="./images/g3.jpg" srcset="./images/g3.jpg 1x" loading="lazy" alt="gallery3" class="fade-up delay-2">
-            <img src="./images/g4.jpg" srcset="./images/g4.jpg 1x" loading="lazy" alt="gallery4" class="fade-up delay-3">
-            <img src="./images/g5.jpg" srcset="./images/g5.jpg 1x" loading="lazy" alt="gallery5" class="fade-up delay-4">
-            <img src="./images/g6.jpg" srcset="./images/g6.jpg 1x" loading="lazy" alt="gallery6" class="fade-up delay-5">
-        </div>
-    </section -->
-    <!-- TESTiMONIaLS -->
-    <!-- <section class="testimonial">
-        <img src="./images/traveler.png" class="testi-img">
-        <div>
-            <h2>What Our Travelers Say</h2>
-            <p>"Perfectly organized tours, professional guides and unforgettable moments."</p>
-            <h4>- James Carter</h4>
-        </div>
-    </section> -->
-
-    <!-- TEAM -->
-    <!-- <section class="section">
-        <h2 class="section-title">Meet Our Expert Travel Team</h2>
-        <div class="team">
-            <div class="team-card">
-                <img src="./images/t1.jpg">
-                <h4>Stephanie Carter</h4>
-                <p>Guide – 10 yrs</p>
+            <div id="packages-table">
+                <!-- Table will be populated here -->
             </div>
-            <div class="team-card">
-                <img src="./images/t2.jpg">
-                <h4>Alex Brown</h4>
-                <p>Tour Planner – 7 yrs</p>
-            </div>
-            <div class="team-card">
-                <img src="./images/t3.jpg">
-                <h4>Jordan Lee</h4>
-                <p>Travel Consultant – 6 yrs</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact section fade-up">
-        <div class="contact-form">
-            <h2>Get In Touch</h2>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Message"></textarea>
-            <button class="explore-btn">Send Message</button>
-        </div>
-
-        <div class="map">
-            <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer"></iframe>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2025 PMS Travel and Tours Agency. All Rights Reserved.</p>
+        </section>
+        
+        <section id="contact-us" class="contact-us">
+            <h2>Contact Us</h2>
+            <p>Have questions or need help planning your trip? Reach out to us!</p>
+            <form id="contact-form">
+                <label for="contact-name">Full Name:</label>
+                <input type="text" id="contact-name" required>
+                <label for="contact-email">Email:</label>
+                <input type="email" id="contact-email" required>
+                <label for="contact-message">Message:</label>
+                <textarea id="contact-message" placeholder="Tell us about your inquiry..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        
+        <section id="check-status">
+            <h2>Check Booking Status</h2>
+            <form id="status-form">
+                <label for="booking-id">Booking ID:</label>
+                <input type="text" id="booking-id" placeholder="Enter your booking ID" required>
+                <button type="submit">Check Status</button>
+            </form>
+            <div id="status-result" class="status-result" style="display: none;"></div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Travel & Tour Agency. All rights reserved.</p>
     </footer>
 
-    <!-- SUCCESS MODAL -->
-    <div id="successModal" class="modal" aria-hidden="true">
-        <div class="modal-inner">
-            <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
-            <h3>Booking Sent</h3>
-            <p>Your booking request has been opened in a new tab. We'll contact you shortly.</p>
-            <button id="okBtn" class="explore-btn">OK</button>
+    <!-- Modal for Booking Forms -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-form-content">
+                <!-- Form will be inserted here -->
+            </div>
         </div>
     </div>
 
-    <script src="./scripts/script.js"></script>
-
+    <script src="http://pms-travel-tour-agency.com/scripts/script.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </body>
 </html>
-
-
