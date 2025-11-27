@@ -32,7 +32,7 @@ function openModal(type) {
     if (type === 'Land' || type === 'Sea') {
         formContent.innerHTML = `
             <h2>Book a ${type}-Based Tour</h2>
-            <form id="modal-land-form">
+            <form id="modal-land-form" action="https://formspree.io/f/xgvjkkgo" method="POST">
                 <label for="modal-tour-type">Tour Type:</label>
                 <select id="modal-tour-type" required>
                     <option value="">Select...</option>
@@ -159,3 +159,4 @@ document.getElementById('status-form').addEventListener('submit', function(e) {
     resultDiv.textContent = `Status: ${status}`;
     resultDiv.style.display = 'block';
 });
+
