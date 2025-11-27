@@ -1,5 +1,16 @@
 let allPackages = []; // Store all fetched packages
 
+// IntersectionObserver for fade-up animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+    }
+    });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
 // Function to create table
 function createTable(packages) {
     if (packages.length === 0) return '<p>No packages available for this type.</p>';
@@ -159,4 +170,5 @@ document.getElementById('status-form').addEventListener('submit', function(e) {
     resultDiv.textContent = `Status: ${status}`;
     resultDiv.style.display = 'block';
 });
+
 
